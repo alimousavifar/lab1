@@ -207,9 +207,6 @@ The simulator will be our main program that will drive our cars.
             Car myPrius= new Car("Prius", 1000, 750, 0.43);
             string winner;
 
-            // GO!!!!
-            myTesla.accelerate(true);
-            myPrius.accelerate(true);
 
             // drive for 60 seconds
             double dt = 1;
