@@ -295,7 +295,7 @@ You can use lists or arrays and depending on your choice implementation of const
    Note that the List library is defined in `System.Collections.Generic` namespace.
 ## Submitting Your Lab
 
-- Each lab is graded out of 5, and is due by the start of the following lab period (i.e. Lab 1 is due by the start of the Lab 2 time-slot).
+- Each lab is graded out of 5, and is due by the start of the following lab period (i.e. Lab 1 is due in 1 week).
 - You must hand in your lab files to turnitin. You should have created an account as you first week assignment..
-- You must commit your code to a **private** github repository and add the instructor user (alimousavifar) and the TA user name (to be announced) as collaborators to your private repository. 
+- You must commit your code to a **private** github repository and add the TA user name as collaborators to your private repository. 
 
