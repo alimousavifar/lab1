@@ -28,7 +28,7 @@ Start by creating a new Solution in Visual Studio (VS) and name it CarSimulator 
 Now, create a new file of type Empty Class and name it Physics1D under CarSimulator project. We will define and implement the methods which are used by main program calls
 
 
-```
+```c#
 using System;
 namespace CarSimulator
 {
@@ -43,7 +43,7 @@ namespace CarSimulator
 
 Add the following functions inside the Physics1D:
 
-```
+```c#
 public static double compute_position(double x0, double v, double dt){ // to do}
 public static double compute_velocity(double v0, double a, double dt){ // to do}
 public static double compute_velocity(double x0, double t0, double x1, double t1){ // to do}
@@ -68,7 +68,7 @@ If you are unsure about reading the equations above, you may use [quicklatex](ht
 
 Next, we implement the main method of the Program class which we created in Q1. We are going to use our mini Physics1D library to simulate a car driving down a straight road.  
 
-```
+```c#
 using System;
 
 namespace CarSimulator
@@ -156,7 +156,7 @@ We are now going to modify our car simulator, encapsulating some of the function
 A `State` consists of a position, velocity, acceleration, and time.  We want these attributes to be **public** so they can be accessed directly.  We will also give the state a `set(...)` method so we can easily set all the attributes in one go.
 
 A `Car` has a model name, mass, maximum engine force, and drag area.  The car will also have a `state` associated with it.  We'll give the car the following methods:
-```
+```c#
 public class Car
     {
         private double mass;
@@ -197,7 +197,7 @@ The simulator will be our main program that will drive our cars.
 
 1. Create a file named `DragRace.cs`, and add a main method that looks like this:
  
-  ```
+  ```c#
    public class DragRace
     {
         static void Main(string[] args)
@@ -230,7 +230,7 @@ Let's say we wanted to create a fleet of one hundred [Evo](https://www.evo.ca) c
 
 1. Create a car hierarchy of classes consisting of a Prius, Mazda 3, and Tesla Model 3. Each should have only a default constructor which calls the parent `Car` constructor with some appropriate values.  Since these implementations should be quite short, you can fully implement them within the header files.  For example, a Prius implementation might look like this:
  
-```
+```c#
  public class Prius : Car
     {
         public Prius() : base()
@@ -246,7 +246,7 @@ Let's say we wanted to create a fleet of one hundred [Evo](https://www.evo.ca) c
 
 ```
 2. Create a fourth car type, `Herbie`, that overrides the `drive(...)` function.  Herbie doesn't follow the laws of physics, so you can let it do whatever you like (e.g. ignore air resistance, or random velocities, etc...).  For Herbie to access some of the member variables in `Car` directly, those memeber variables which were private now need to change to **protected**:
-```
+```c#
 public class Car
     {
         protected double mass;
@@ -256,7 +256,7 @@ public class Car
 ```
 3. Create a new program in a file named `Highway.cs`.  In the main method, we will create a fleet of 100 cars (25 of each car type).  
    **Note:** Here we create four different arrays or list of the explicit types `Prius`, `Mazda3`, `Tesla3`, and `Herbie` to store our fleet.
-```
+```c#
    // create fleet
   int fleetNumberPerType = 25;
 
@@ -274,7 +274,7 @@ You can use lists or arrays and depending on your choice implementation of const
 
 
 4. Instead of a list or array per inherited class of car (Tesla, Prius, ...), create a combined list of cars for storing the entire fleet.
-   ```
+   ```c#
    var myCars = new List<Car>();
    for (int i = 0; i < fleetNumberPerType; i++)
     {
